@@ -18,6 +18,8 @@ func main() {
 
 		ses.ReadSession()
 
+		ses.Remove()
+		
 		fmt.Println(ses.Movie_id)
 	} else {
 		ses.CreateSession()
