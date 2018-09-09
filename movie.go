@@ -558,7 +558,6 @@ func Sendik(chat_id int64, message_id int, bot *tgbotapi.BotAPI, Lang translate.
 			log.Println(err)
 			movies := arrayOfMovies[min : max-1]
 }
-*/
 
 
 func getContentByChannel(url string, ch chan bool) {
@@ -581,3 +580,4 @@ func getContentByChannel(url string, ch chan bool) {
 		}
 	}
 }
+*/
