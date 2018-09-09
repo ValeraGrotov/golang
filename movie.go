@@ -418,7 +418,7 @@ func SearchMoviesByActor(langcode, actors string) ([]Movie, error) {
 	}
 }
 
-
+/*
 func SendMovies(chat_id int64, message_id int, bot *tgbotapi.BotAPI, Lang translate.Translate, arrayOfMovies []Movie, page int, movie_title string) {
 	if len(arrayOfMovies) <= 11 {
 		// Просто отправим все фильмы		
@@ -535,6 +535,7 @@ func SendMovies(chat_id int64, message_id int, bot *tgbotapi.BotAPI, Lang transl
 	}
 		// Просто отправим все фильмы
 
+	
 func Sendik(chat_id int64, message_id int, bot *tgbotapi.BotAPI, Lang translate.Translate, arrayOfMovies []Movie) {
 	for i := 0; i < len(arrayOfMovies); i++{
 		movie := arrayOfMovies[i]
@@ -557,7 +558,7 @@ func Sendik(chat_id int64, message_id int, bot *tgbotapi.BotAPI, Lang translate.
 			log.Println(err)
 			movies := arrayOfMovies[min : max-1]
 }
-
+*/
 
 
 func getContentByChannel(url string, ch chan bool) {
