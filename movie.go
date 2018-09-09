@@ -7,10 +7,8 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"strconv"
 	"strings"
 	"translate"
-	"unicode/utf8"
 	
 	"github.com/go-telegram-bot-api/telegram-bot-api"
 	_ "github.com/go-sql-driver/mysql"
