@@ -333,7 +333,6 @@ func SearchMovies(langcode, movieTitle string) ([]Movie, error) {
 		return movies, nil
 	}
 }
-*/
 
 func SearchMoviesByActor(langcode, actors string) ([]Movie, error) {
 	countLen := utf8.RuneCountInString(actors)
@@ -418,7 +417,6 @@ func SearchMoviesByActor(langcode, actors string) ([]Movie, error) {
 	}
 }
 
-/*
 func SendMovies(chat_id int64, message_id int, bot *tgbotapi.BotAPI, Lang translate.Translate, arrayOfMovies []Movie, page int, movie_title string) {
 	if len(arrayOfMovies) <= 11 {
 		// Просто отправим все фильмы		
