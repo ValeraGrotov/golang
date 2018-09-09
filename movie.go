@@ -251,7 +251,20 @@ func getMovieIframeLink(url string) string {
 	return "http://vk.com"
 }
 
-
+func getContent(url string) string {
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Println(err)
+		return ""
+	} else {
+		bytes, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			fmt.Println(err)
+		}
+		resp.Body.Close()
+		return string(bytes)
+	}
+}
 
 /*
 func SearchMovies(langcode, movieTitle string) ([]Movie, error) {
