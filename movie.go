@@ -164,7 +164,6 @@ func GetMovieByID(langcode, idFilm string) (Movie, error) {
 }
 
 func NewVideo(langcode, filename string, Lang translate.Translate) Video {
-	video := ""
 	ar := strings.Split(filename, "/")
 	ar = strings.Split(ar[2], "-")
 	number := ar[0]
