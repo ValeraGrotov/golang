@@ -5,19 +5,13 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
 	"github.com/go-redis/redis"
 )
 
-var redisdb *redis.Client
-
-func init() {
-	redisdb = redis.NewClient(&redis.Options{
+func main() {	
+	redisdb := redis.NewClient(&redis.Options{
 		Addr:     "addr:6379",
 	})
-}
-
-func main() {
 	pubsub := redisdb.Subscribe("chat")
 	_, err := pubsub.Receive()
 	if err != nil {
@@ -42,7 +36,6 @@ func main() {
 		if scanner.Scan() {
 			message = scanner.Text()
 		}
-
 		err = redisdb.Publish("chat", "2:BIG"+message).Err()
 		if err != nil {
 			fmt.Println(err)
